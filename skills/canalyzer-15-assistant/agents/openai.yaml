@@ -1,0 +1,14 @@
+interface:
+  display_name: CANalyzer 15 Assistant
+  short_description: CAPL, log analysis and CANalyzer 15 workflows
+  default_prompt: Use $canalyzer-15-assistant to analyze my CANalyzer 15 trace and
+    draft a compatible CAPL check.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

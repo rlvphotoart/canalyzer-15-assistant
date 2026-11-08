@@ -1,0 +1,11 @@
+*.blf
+*.asc
+*.pcap
+*.pcapng
+*.dbc
+*.arxml
+*.cfg
+*.log
+.env
+.env.*
+__pycache__/
