@@ -20,3 +20,13 @@ Use $canalyzer-15-assistant to analyze `timing-check.csv` using this requirement
 | 4.000 s | Not observed | Only 200 ms captured | Inconclusive |
 
 Totals: 2 Pass, 1 Fail, 1 Inconclusive; 4 triggers. Of the 3 conclusive checks, 2 passed (66.7%). This exercise verifies analysis semantics, not CAPL compilation or CANalyzer runtime compatibility.
+
+## Reproduce with the offline checker
+
+From the repository root, using Python 3.10+:
+
+```sh
+python3 skills/canalyzer-15-assistant/scripts/check_timing.py examples/timing-check.csv --window-ms 500 --complete-event-export
+```
+
+The JSON includes every trigger, deadline, response transition, delay, observed window end and outcome. Exit status is 1 because this fixture intentionally includes a Fail. The completeness assertion is justified by the synthetic export semantics above; establish those semantics separately before using a real export. See [the full input contract](../skills/canalyzer-15-assistant/references/offline-timing.md).

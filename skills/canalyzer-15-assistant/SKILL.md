@@ -40,6 +40,8 @@ Read [compatibility.md](references/compatibility.md) for product boundaries, pac
 5. Report counts, denominator, first/last occurrence, timestamps and representative evidence. Distinguish measured outcomes, hypotheses and missing evidence. An ACK error alone does not prove a specific ECU or wiring fault.
 6. For requirements checks, produce Pass/Fail only from explicit criteria and adequate evidence; otherwise use Inconclusive and explain the missing condition. Keep causal claims proportional to evidence.
 
+For complete decoded binary signal event exports, read [offline-timing.md](references/offline-timing.md) before using `scripts/check_timing.py`. It implements independent, non-overlapping trigger-to-response transition windows with inclusive deadlines. Use it only when the input and requirement match its contract; periodic samples, unknown completeness, overlapping windows and raw bus logs need separate analysis. The helper requires Python 3.10+ and has no CANalyzer or bench connection.
+
 ## Deliver the result
 
 Lead with the finding or proposed change. Include only relevant assumptions, code/diff or setup steps, evidence, verification status and the next useful check. For validation findings, use compact columns: Check, Expected, Observed, Time/channel, Result. Never fabricate test execution, complete coverage, root causes or successful decoding.
