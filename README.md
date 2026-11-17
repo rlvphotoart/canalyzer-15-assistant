@@ -44,6 +44,10 @@ For code drafting, also state the program location, channel, database symbols, u
 
 See [the synthetic example](examples/timing-check.md) for a complete timing-analysis exercise.
 
+## Continue from timing evidence to a validation report
+
+The [CAN Timing and Validation Reporting Kit on Agensi](https://www.agensi.io/bundles/can-timing-and-validation-reporting-kit) groups this assistant with Offline Signal Timing Checker and Automotive Validation Report Builder. Use the kit to measure trigger-to-response latency from a decoded CSV and turn reviewed results into a requirement-linked report with evidence and retest actions.
+
 ## Privacy and contributions
 
 Use synthetic or authorized sanitized inputs in issues and pull requests. Keep customer DBCs, configurations, traces, VINs and credentials out of this public distribution. Include the exact product version and variant with compatibility reports.
